@@ -1,33 +1,127 @@
-<table class="table table-hover" id="departmentsTable">
-    <thead>
-        <tr>
-            <th scope="col">channel_name</th>
-            <th scope="col">url</th>
-            <th scope="col">Description</th>
-            <th scope="col">Channel_id</th>
-            <th scope="col">Detect Language</th>
-            
-            <th scope="col">category</th>
-            <th scope="col">subscribers</th>
-            <th scope="col">videos</th>
-            <th scope="col">views</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% exportData.forEach(function(appoint){ %>
-            <tr>
-                <td><%= appoint.channel_name %></td>
-                <td><%= appoint.url %></td>
-                <td><%= appoint.description %></td>
-                <td><%= appoint.channel_id %></td>
-                <td><%= appoint.detected_language %></td>
-                <td><%= appoint.subscribers%></td>
-                <td><%= appoint.videos %></td>
-                <td><%= appoint.views %></td>
-            </tr>
-            <% }) %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="SMART HRM">
+        <meta name="keywords" content="admin,dashboard">
+        <meta name="author" content="stacks">
+        <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+        <!-- Title -->
+        <title>CEO Dashboard | Smart HRM</title>
+
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+        <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">  
+        
+        <link rel="stylesheet" href="/assets/css/jquery.dataTables.min.css">
+        <!-- Theme Styles -->
+        <link href="/assets/css/lime.min.css" rel="stylesheet">
+        <link href="/assets/css/custom.css" rel="stylesheet">
        
-            
-           
-    </tbody>
-</table> 
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="/assets/plugins/jquery/jquery-3.1.0.min.js"></script> 
+        <script src="/assets/plugins/select2/js/select2.full.min.js"></script>
+        <script src="/assets/js/pages/select2.js"></script>
+    </head>
+    <body>
+        
+    <div class="lime-container">
+    <div class="lime-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title">
+                        <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb breadcrumb-separator-1">
+                            
+                          </ol>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Total Appointments -->
+            <div class="row">
+                    
+
+                <div class="col-md-6 offset-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">All extracted Channel Data Here</h5>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+                        <div class="col-xl">
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <table class="table table-hover" id="departmentsTable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">channel_name</th>
+                                                <th scope="col">url</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Channel_id</th>
+                                                <th scope="col">Detect Language</th>
+                                                
+                                                <th scope="col">category</th>
+                                                <th scope="col">subscribers</th>
+                                                <th scope="col">videos</th>
+                                                <th scope="col">views</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% exportData.forEach(function(appoint){ %>
+                                                <tr>
+                                                    <td><%= appoint.channel_name %></td>
+                                                    <td><%= appoint.url %></td>
+                                                    <td><%= appoint.description %></td>
+                                                    <td><%= appoint.channel_id %></td>
+                                                    <td><%= appoint.detected_language %></td>
+                                                    <td><%= appoint.category%></td>
+                                                    <td><%= appoint.subscribers%></td>
+                                                    <td><%= appoint.videos %></td>
+                                                    <td><%= appoint.views %></td>
+                                                </tr>
+                                                <% }) %>
+                                           
+                                                
+                                               
+                                        </tbody>
+                                    </table>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+    <!-- Javascripts -->
+    <script src="../../assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../assets/js/lime.min.js"></script>
+    <script src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/js/viewDepartment.js"></script>
+</body>
+</html>
