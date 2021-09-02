@@ -190,8 +190,10 @@ async function pursueLinks(browser, page) {
       console.log(channelData);
       
       await exportData.push(channelData);
-      res.render("selectChoice");
+      
+      
     }
+    res.render("selectChoice",{exportData:exportData});
   } catch (error) {
     console.error(error);
   }
