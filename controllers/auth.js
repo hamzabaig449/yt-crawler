@@ -189,28 +189,12 @@ async function pursueLinks(browser, page) {
       channelData["last_upload_date"] = dateformat(channelInfo[4], "isoDate");
       console.log(channelData);
       
-      exportData.push(channelData);
+      await exportData.push(channelData);
+      res.render("selectChoice");
     }
   } catch (error) {
     console.error(error);
   }
-}
-
-async function writeToFile() {
-  try {
-    var xls = json2xls(exportData);
-    
-    await fs.writeFileSync(EXPORT_FILE_NAME, xls, "binary");
-    
-  } catch (e) {
-    console.error("Export error! " + e);
-  }
-
-
-setTimeout(function() {
-  
-}, 8000);
-res.render("selectChoice");
 }
 
 }
