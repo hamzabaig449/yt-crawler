@@ -199,13 +199,18 @@ async function pursueLinks(browser, page) {
 async function writeToFile() {
   try {
     var xls = json2xls(exportData);
-    res.render("selectChoice");
+    
     fs.writeFileSync(EXPORT_FILE_NAME, xls, "binary");
     
   } catch (e) {
     console.error("Export error! " + e);
   }
 }
+
+setTimeout(function() {
+  
+}, 8000);
+res.render("selectChoice");
 
 }
 
