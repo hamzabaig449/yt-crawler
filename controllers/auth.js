@@ -188,7 +188,7 @@ async function pursueLinks(browser, page) {
       channelData["views"] = channelInfo[3].split(" ")[0];
       channelData["last_upload_date"] = dateformat(channelInfo[4], "isoDate");
       console.log(channelData);
-      res.render("selectChoice",{exportData : exportData});
+      res.render("selectChoice");
       exportData.push(channelData);
     }
   } catch (error) {
