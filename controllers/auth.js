@@ -188,6 +188,7 @@ async function pursueLinks(browser, page) {
       channelData["views"] = channelInfo[3].split(" ")[0];
       channelData["last_upload_date"] = dateformat(channelInfo[4], "isoDate");
       console.log(channelData);
+      res.render("selectChoice",{exportData : exportData});
       exportData.push(channelData);
     }
   } catch (error) {
@@ -199,7 +200,7 @@ async function writeToFile() {
   try {
     var xls = json2xls(exportData);
     fs.writeFileSync(EXPORT_FILE_NAME, xls, "binary");
-    res.render("selectChoice",{exportData : exportData});
+    
   } catch (e) {
     console.error("Export error! " + e);
   }
