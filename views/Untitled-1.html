@@ -1,0 +1,33 @@
+<table class="table table-hover" id="departmentsTable">
+    <thead>
+        <tr>
+            <th scope="col">channel_name</th>
+            <th scope="col">url</th>
+            <th scope="col">Description</th>
+            <th scope="col">Channel_id</th>
+            <th scope="col">Detect Language</th>
+            
+            <th scope="col">category</th>
+            <th scope="col">subscribers</th>
+            <th scope="col">videos</th>
+            <th scope="col">views</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% exportData.forEach(function(appoint){ %>
+            <tr>
+                <td><%= appoint.channel_name %></td>
+                <td><%= appoint.url %></td>
+                <td><%= appoint.description %></td>
+                <td><%= appoint.channel_id %></td>
+                <td><%= appoint.detected_language %></td>
+                <td><%= appoint.subscribers%></td>
+                <td><%= appoint.videos %></td>
+                <td><%= appoint.views %></td>
+            </tr>
+            <% }) %>
+       
+            
+           
+    </tbody>
+</table> 

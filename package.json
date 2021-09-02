@@ -1,0 +1,30 @@
+{
+  "name": "extract",
+  "version": "1.0.0",
+  "description": "extract youtube channel data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Hamza",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "country-code-lookup": "^0.0.19",
+    "dateformat": "^4.5.1",
+    "deabbreviate-number": "^1.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "extract-urls": "^1.3.2",
+    "http-errors": "^1.8.0",
+    "json2xls": "^0.1.2",
+    "languagedetect": "^2.0.0",
+    "morgan": "^1.10.0",
+    "node-email-extractor": "^1.0.3",
+    "path": "^0.12.7",
+    "puppeteer": "^10.2.0"
+  }
+}
