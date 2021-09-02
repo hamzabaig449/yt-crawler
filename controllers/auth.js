@@ -61,7 +61,7 @@ async function crawl() {
       itemCount = itemCount.replace(/\D/g, "");
       console.log("You got " + itemCount + " results for your query");
       await crawlResultSet(browser, page);
-      await writeToFile();
+      
       await browser.close();
     })();
   } catch (err) {
