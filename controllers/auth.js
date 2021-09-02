@@ -193,11 +193,12 @@ async function pursueLinks(browser, page) {
       
       
     }
-    res.render("selectChoice");
+    
   } catch (error) {
     console.error(error);
   }
 }
+res.render("selectChoice");
 
 }
 
